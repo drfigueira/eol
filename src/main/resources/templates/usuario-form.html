@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>EOL OS Cadastro</title>
+</head>
+<body>
+
+	<h2>Novo usuário</h2>
+	<form th:action="@{/users}" method="post">
+
+		<label for="name">Nome:</label>
+		<input type="text" name="name" id="name" required>
+		<br>
+
+		<label for="username">Usuário:</label>
+		<input type="text" name="username" id="username" required>
+		<br>
+
+		<label for="email">E-mail:</label>
+		<input type="email" name="email" id="email" required>
+		<br>
+
+		<label for="phone">Telefone:</label>
+		<input type="text" name="phone" id="phone" required>
+		<br>
+
+		<label for="password">Senha:</label>
+		<input type="password" name="password" id="password" required>
+		<br>
+
+		<label for="confirm">Confirme a Senha:</label>
+		<input type="password" name="confirm" id="confirm" required>
+		<br>
+
+		<input type="submit" value="Cadastrar">
+	</form>
+	
+</body>
+</html>

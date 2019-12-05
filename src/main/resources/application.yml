@@ -1,0 +1,11 @@
+server:
+  port: 8000
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+app:
+  jwtSecret: JWTSuperSecretKey
+  jwtExpirationInMs: 604800000

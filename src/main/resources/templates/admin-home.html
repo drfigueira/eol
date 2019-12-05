@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EOL Admin Home</title>
+</head>
+<body>
+
+<h1>EOL Admin Home!</h1>
+
+<div>
+    <a th:href="@{/admin/ordem-servico/atrasadas}">OS atrasadas</a>
+    <br>
+    <a th:href="@{/admin/instalador/finalizadas}">OS finalizadas no prazo por instalador</a>
+    <br>
+    <a th:href="@{/admin/instalador/atrasadas}">Instaladores com OS atrasadas</a>
+    <br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EOL OS Finalizadas Por Instalador</title>
+</head>
+<body>
+
+<h1>EOL Admin: Relação de ordem de serviços finalizadas no prazo por instalador!</h1>
+
+<div th:each="os : ${osFinalizadasInstalador}">
+    <label>Nome do instalador: </label>
+    <label th:text="${os.instalador.name}">Instalador</label>
+    <br>
+    <label>Quantidade de OS finalizadas no prazo: </label>
+    <label th:text="${os.quantidade}">OS Atrasadas</label>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EOL Criar Nova OS</title>
+</head>
+<body>
+
+    <h2>Nova ordem de serviço</h2>
+    <form th:action="@{/ordem-servico}" th:object="${ordemServico}" method="post">
+
+        <fieldset>
+            <legend>Tipo de plano:</legend>
+            <label>   <input type="radio" th:field="*{plano}" value="Monofasico" checked="checked" />Monofasico   </label>
+            <label>   <input type="radio" th:field="*{plano}" value="Bifasico" />Bifasico    </label>
+            <label>   <input type="radio" th:field="*{plano}" value="Trifasico" />Trifasico    </label>
+        </fieldset>
+
+        <label>Cidade:</label>
+        <input type="text" th:field="*{endereco.cidade}" required>
+        <br>
+
+        <label>Bairro:</label>
+        <input type="text" th:field="*{endereco.bairro}" required>
+        <br>
+
+        <label>Rua:</label>
+        <input type="text" th:field="*{endereco.rua}" required>
+        <br>
+
+        <input type="submit" value="Criar">
+    </form>
+
+</body>
+</html>

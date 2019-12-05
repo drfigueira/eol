@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>EOL Home</title>
+</head>
+<body>
+
+    <h1>EOL Home!</h1>
+
+    <div>
+        <a th:href="@{/ordem-servico}">Criar nova OS</a>
+        <br>
+        <a th:href="@{/login}">Login</a>
+        <br>
+        <a th:href="@{/users}">Cadastrar</a>
+    </div>
+
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        <a th:href="@{/admin}">Painel de administrador</a>
+    </div>
+
+</body>
+</html>

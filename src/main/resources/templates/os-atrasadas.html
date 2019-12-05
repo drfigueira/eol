@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EOL OS Atrasadas</title>
+</head>
+<body>
+
+    <h1>EOL Admin: Relação de ordem de serviços atrasadas!</h1>
+
+    <div th:each="os : ${osAtrasadas}">
+        <label th:text="${os.plano.nome}">Plano</label>
+            <br>
+        <label>Nome do cliente: </label>
+        <label th:text="${os.usuario.name}">Nome usuario</label>
+            <br>
+        <label>Data de atribuição ao instalador: </label>
+        <label th:text="${os.dataAtribuicao}">Data atribuicao</label>
+        <br>
+        <br>
+    </div>
+
+</body>
+</html>
